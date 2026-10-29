@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
 
@@ -13,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useSession } from "@/lib/auth-client";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -20,6 +23,10 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const { data: session } = useSession();
+  const user = session?.user;
+  // console.log(user, "user");
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
       <nav

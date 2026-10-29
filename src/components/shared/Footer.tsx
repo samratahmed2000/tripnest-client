@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MailIcon, ShieldCheckIcon } from "lucide-react";
 
+import Logo from "@/components/shared/Logo";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -71,9 +72,9 @@ const Footer = () => {
           <div>
             <Link
               href="/"
-              className="font-heading text-xl font-semibold tracking-tight"
+              className="inline-flex rounded-lg outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
             >
-              Tripnest
+              <Logo />
             </Link>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
